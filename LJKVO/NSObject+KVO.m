@@ -75,23 +75,26 @@ static NSString *const kLJKVOAssiociateKey = @"kLJKVO_AssiociateKey";
 - (Class)createChildClassWithKeyPath: (NSString *)keyPath{
     // 2.1. 拼接字符串
     NSString *oldClassName = NSStringFromClass([self class]);
-    NSString *newClassName = [NSString stringWithFormat:@"%@%@", @"LJKVONotifying_", oldClassName];
+    NSString *newClassName = [NSString stringWithFormat:@"%@%@",kLJKVOPrefix,oldClassName];
+
     Class newClass = NSClassFromString(newClassName);
     // 2.2 防止重复添加
     if (newClass) {
         return newClass;
     }
-    // 2.3 注册类
+    // 2.3 : 申请类
+    newClass = objc_allocateClassPair([self class], newClassName.UTF8String, 0);
+    // 2.4 注册类
     objc_registerClassPair(newClass);
     
-    // 2.3.1 添加Class 方法
+    // 2.4.1 添加Class 方法
     SEL classSEL = NSSelectorFromString(@"class");
     Method classMethod = class_getInstanceMethod([self class], classSEL);
     const char *classTypes = method_getTypeEncoding(classMethod);
     class_addMethod(newClass, classSEL, (IMP)lj_class, classTypes);
     
-    // 2.3.2 添加setter 方法
-    SEL setterSEL = NSSelectorFromString(keyPath);
+    // 2.4.2 添加setter 方法
+    SEL setterSEL = NSSelectorFromString(setterForGetter(keyPath));
     Method setterMethod = class_getInstanceMethod([self class], setterSEL);
     const char *setterTypes = method_getTypeEncoding(setterMethod);
     class_addMethod(newClass, setterSEL, (IMP)lj_setter, setterTypes);

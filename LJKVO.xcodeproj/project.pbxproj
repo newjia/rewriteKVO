@@ -16,6 +16,7 @@
 		2A3A9F552465631400A13845 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3A9F542465631400A13845 /* main.m */; };
 		2A3A9F5D2465632A00A13845 /* NSObject+KVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3A9F5C2465632A00A13845 /* NSObject+KVO.m */; };
 		2A3A9F602465C8EA00A13845 /* LJKVOInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3A9F5F2465C8EA00A13845 /* LJKVOInfo.m */; };
+		2A7BF24824665D2C005ED4F3 /* Dog.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A7BF24724665D2C005ED4F3 /* Dog.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		2A3A9F5C2465632A00A13845 /* NSObject+KVO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+KVO.m"; sourceTree = "<group>"; };
 		2A3A9F5E2465C8EA00A13845 /* LJKVOInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LJKVOInfo.h; sourceTree = "<group>"; };
 		2A3A9F5F2465C8EA00A13845 /* LJKVOInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LJKVOInfo.m; sourceTree = "<group>"; };
+		2A7BF24624665D2C005ED4F3 /* Dog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dog.h; sourceTree = "<group>"; };
+		2A7BF24724665D2C005ED4F3 /* Dog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Dog.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +76,8 @@
 				2A3A9F462465631100A13845 /* SceneDelegate.m */,
 				2A3A9F482465631100A13845 /* ViewController.h */,
 				2A3A9F492465631100A13845 /* ViewController.m */,
+				2A7BF24624665D2C005ED4F3 /* Dog.h */,
+				2A7BF24724665D2C005ED4F3 /* Dog.m */,
 				2A3A9F5B2465632A00A13845 /* NSObject+KVO.h */,
 				2A3A9F5C2465632A00A13845 /* NSObject+KVO.m */,
 				2A3A9F5E2465C8EA00A13845 /* LJKVOInfo.h */,
@@ -160,6 +165,7 @@
 				2A3A9F442465631100A13845 /* AppDelegate.m in Sources */,
 				2A3A9F602465C8EA00A13845 /* LJKVOInfo.m in Sources */,
 				2A3A9F5D2465632A00A13845 /* NSObject+KVO.m in Sources */,
+				2A7BF24824665D2C005ED4F3 /* Dog.m in Sources */,
 				2A3A9F552465631400A13845 /* main.m in Sources */,
 				2A3A9F472465631100A13845 /* SceneDelegate.m in Sources */,
 			);
